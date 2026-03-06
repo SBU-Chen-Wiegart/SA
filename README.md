@@ -1,4 +1,4 @@
-# README: SAM-based TIFF Stack Segmentation
+# README: Segment Anything
 
 ## Overview
 
