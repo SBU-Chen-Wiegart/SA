@@ -43,14 +43,6 @@ The script uses the following libraries:
 
 ## Functions
 
-### `show_anns(anns)`
-
-Displays all generated masks as semi-transparent colored overlays.
-
-**Input:**
-
-* `anns`: list of segmentation masks returned by SAM
-
 ### `NormalizeData(data)`
 
 Normalizes the image intensities to the range `[0, 1]`.
