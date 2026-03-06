@@ -60,33 +60,7 @@ def get_from_masks(masks):
     return masks[i]['segmentation'] 
  
 if __name__=='__main__':
-    
-    # # Dog
-    # # img_gray = io.imread(r'D:/Downloads/SAM_dataset.jpg', as_gray=True)
-    # # MSEE
-    # # fn = r'E:/Research_Data/SAM/33328.tiff'
-    # fn = r'E:/Research_Data/SAM/33303.tiff'
-    # img_stack = io.imread(fn)
-    # # img_gray = img_gray[200] # **
-    # # img_gray = img_gray[220]
-    # # img_gray = NormalizeData(img_gray)
-    
-    # # load model
-    # sam = sam_model_registry["default"](checkpoint="E:/Research_Data/SAM/sam_vit_h_4b8939.pth")
-    # device = 'cuda'
-    # sam.to(device=device)
-    # mask_generator = SamAutomaticMaskGenerator(sam)
-    
-    # mask_stack = np.zeros(img_stack.shape)
-    # for i in tqdm(range(15, img_stack.shape[0])):
 
-    #     mask = seg_slice(img_stack[i], mask_generator)
-    #     mask_stack[i] = mask
-    #     # plt.figure()
-    #     # plt.imshow(mask)
-    # io.imsave(rf'{fn[:-5]}_seg.tiff', np.float32(mask_stack))
-    
-    # fn list
     fn_list = [r'E:/Research_Data/SAM/33303.tiff',
                r'E:/Research_Data/SAM/33308.tiff',
                r'E:/Research_Data/SAM/33310.tiff',
@@ -96,12 +70,7 @@ if __name__=='__main__':
                r'E:/Research_Data/SAM/33325.tiff',
                r'E:/Research_Data/SAM/33333.tiff']
     for fn in fn_list:
-        # fn = r'E:/Research_Data/SAM/33303.tiff'
         img_stack = io.imread(fn)
-        # img_gray = img_gray[200] # **
-        # img_gray = img_gray[220]
-        # img_gray = NormalizeData(img_gray)
-        
         # load model
         sam = sam_model_registry["default"](checkpoint="E:/Research_Data/SAM/sam_vit_h_4b8939.pth")
         device = 'cuda'
@@ -116,5 +85,6 @@ if __name__=='__main__':
             # plt.figure()
             # plt.imshow(mask)
         io.imsave(rf'{fn[:-5]}_seg.tiff', np.float32(mask_stack))
+
 
  
