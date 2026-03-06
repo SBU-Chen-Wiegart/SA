@@ -82,39 +82,6 @@ Segments a single grayscale image slice.
 
 Selects a segmentation mask whose area is within a predefined range.
 
-**Current rule:**
-
-* Select the first mask with area between **40000** and **50000** pixels
-
-**Input:**
-
-* `masks`: list of masks returned by SAM
-
-**Output:**
-
-* selected mask segmentation array
-
-## Script Workflow
-
-When the script is run directly:
-
-1. A list of TIFF stack filenames is defined in `fn_list`
-2. Each TIFF stack is loaded using `skimage.io.imread()`
-3. The SAM model is loaded from the checkpoint file
-4. A `SamAutomaticMaskGenerator` is created
-5. Each slice from index `15` to the end is segmented
-6. The resulting mask stack is saved as:
-
-```python
-original_filename_seg.tiff
-```
-
-For example:
-
-```python
-33303.tiff -> 33303_seg.tiff
-```
-
 ## Input and Output
 
 ### Input
