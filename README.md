@@ -30,6 +30,15 @@ You also need:
 * A valid SAM checkpoint file, such as `sam_vit_h_4b8939.pth`
 * A CUDA-capable GPU if using `device = 'cuda'`
 
+** Run **
+The code need to be run under python environment **test_SAM** in the new linux workstation
+
+**Steps:**
+```python
+conda activate test_SAM
+code
+```
+
 ## Imported Packages
 
 The script uses the following libraries:
@@ -56,14 +65,6 @@ Normalizes the image intensities to the range `[0, 1]`.
 * normalized image array
 
 ### `seg_slice(img_gray, mask_generator, otsu_flag=False)`
-
-Segments a single grayscale image slice.
-
-**Steps:**
-```python
-conda activate test_SAM
-code
-```
 
 
 **Input:**
