@@ -60,13 +60,11 @@ Normalizes the image intensities to the range `[0, 1]`.
 Segments a single grayscale image slice.
 
 **Steps:**
+```python
+conda activate test_SAM
+code
+```
 
-1. Normalize the grayscale image
-2. Optionally apply Otsu thresholding
-3. Convert grayscale image to RGB
-4. Convert to 8-bit format
-5. Generate candidate masks using SAM
-6. Select one mask using `get_from_masks()`
 
 **Input:**
 
