@@ -27,7 +27,7 @@ pip install numpy opencv-python matplotlib scikit-image tqdm
 You also need:
 
 * `segment_anything`
-* A valid SAM checkpoint file, such as `sam_vit_h_4b8939.pth`
+* A valid SAM checkpoint file, such as `sam_vit_h_4b8939.pth` https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 * A CUDA-capable GPU if using `device = 'cuda'`
 
 ## Run
