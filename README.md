@@ -2,7 +2,7 @@
 
 ## Overview
 
-This script performs automatic segmentation on grayscale TIFF image stacks using the **Segment Anything Model (SAM)**. It reads one or more TIFF stacks, generates a segmentation mask for each slice, and saves the output as a new TIFF stack.
+This script performs automatic segmentation on **2D** grayscale TIFF image stacks using the **Segment Anything Model (SAM)**. The method generates a segmentation mask each 2d slice of X-ray image, and stacks the output as a new TIFF stack.
 
 The workflow is designed for batch processing of image stacks and is especially useful when the object of interest occupies a roughly consistent area range across slices.
 
