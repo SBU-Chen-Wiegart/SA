@@ -87,6 +87,7 @@ Selects a segmentation mask whose area is within a predefined range.
 
 * One or more grayscale TIFF stacks
 * SAM checkpoint file
+* Threshold of the area to select the region of interest from all the labels
 
 ### Output
 
