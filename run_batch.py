@@ -61,6 +61,9 @@ def get_from_masks(masks, thre1=40000, thre2=50000):
  
 if __name__=='__main__':
 
+    # Inputs
+    # List of file path
+    # Checkpoint file
     # parameters to be tuned: get_from_masks(masks, thre1=40000, thre2=50000)
     
     fn_list = [r'E:/Research_Data/SAM/33303.tiff',
