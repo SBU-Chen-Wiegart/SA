@@ -52,15 +52,17 @@ def seg_slice(img_gray, mask_generator, otsu_flag=False):
     mask_slice = get_from_masks(masks)
     return mask_slice
 
-def get_from_masks(masks):
+def get_from_masks(masks, thre1=40000, thre2=50000):
     for i, m in enumerate(masks):
         area = m['area']
-        if area> 40000 and area < 50000:
+        if area> thre1 and area < thre2:
             break
     return masks[i]['segmentation'] 
  
 if __name__=='__main__':
 
+    # parameters to be tuned: get_from_masks(masks, thre1=40000, thre2=50000)
+    
     fn_list = [r'E:/Research_Data/SAM/33303.tiff',
                r'E:/Research_Data/SAM/33308.tiff',
                r'E:/Research_Data/SAM/33310.tiff',
